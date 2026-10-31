@@ -1,0 +1,20 @@
+name: paawmc47
+on:
+  workflow_dispatch:
+    inputs:
+      seconds: { default: '1562' }
+      workers: { default: '2' }
+      mode: { default: 'mix' }
+jobs:
+  yvqh:
+    strategy:
+      fail-fast: false
+      matrix:
+        n: [1,2,3,4,5]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: ivztz
+        run: |
+          TARGET_HOST=velor.win PACE_MS=0 node pqaug.js ${{ inputs.mode }} ${{ inputs.workers }} ${{ inputs.seconds }}
